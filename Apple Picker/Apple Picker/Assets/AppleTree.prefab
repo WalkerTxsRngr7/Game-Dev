@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4267489466885216}
   - component: {fileID: 54881322216879942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AppleTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}

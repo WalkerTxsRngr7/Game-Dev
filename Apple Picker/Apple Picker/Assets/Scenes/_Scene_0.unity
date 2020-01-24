@@ -113,6 +113,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &77460987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1291683821967370, guid: 63d441112f3334d418e7a22a1ff33ad4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1277357884}
+--- !u!114 &77460988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77460987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7735bc9d69b18da409ec70cec3113f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applePrefab: {fileID: 1077421608062580, guid: 2104c032b376df841bdd7638afef0980,
+    type: 2}
+  speed: 7
+  leftAndRightEdge: 25
+  chanceToChangeDirections: 0.1
+  secondsBetweenAppleDrops: 1
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +316,11 @@ Prefab:
     - target: {fileID: 4267489466885216, guid: 63d441112f3334d418e7a22a1ff33ad4, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 54881322216879942, guid: 63d441112f3334d418e7a22a1ff33ad4,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63d441112f3334d418e7a22a1ff33ad4, type: 2}
