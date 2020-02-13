@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -381,7 +381,7 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 203446105}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 444313538}
   - component: {fileID: 444313537}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Ice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,6 +539,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -574,9 +575,9 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 50
-  field of view: 60
-  orthographic: 1
+  far clip plane: 80
+  field of view: 14
+  orthographic: 0
   orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
@@ -599,13 +600,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.03468924, y: 0.7062554, z: -0.034689233, w: 0.7062554}
-  m_LocalPosition: {x: -22.98, y: 2.47, z: -0.08}
+  m_LocalRotation: {x: 0.06439771, y: 0.69898176, z: -0.06531914, w: 0.7092326}
+  m_LocalPosition: {x: -35.03, y: 4.3, z: -0.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 5.624, y: 90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 10.525001, y: 89.152, z: -0.15300001}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4969ee7ee00be240988762e696b90ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rockYPrefab: {fileID: 1390809418996496, guid: 799f4fd4ba8264746b32d6301275ed48,
+    type: 2}
+  rockRPrefab: {fileID: 1510568821803064, guid: e3607fd1eff7f6d4e8d9368b0830209e,
+    type: 2}
+  camMain: {fileID: 534669904}
+  camCircle: {fileID: 203446107}
 --- !u!1 &633965412
 GameObject:
   m_ObjectHideFlags: 0
