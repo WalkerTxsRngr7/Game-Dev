@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Rock : MonoBehaviour {
+    public GameObject rockYPrefab;
+    public GameObject rockRPrefab;
+    public GameObject pointer;
+    //public bool yPrev = true;
+    public bool rockSpawned = false;
     public Rigidbody rb;
     public bool thrown = false;
     //default speed of the rock
@@ -27,7 +32,7 @@ public class Rock : MonoBehaviour {
             // The value is in the range -1 to 1
             float rotation = Input.GetAxis("Rotate") * rotationSpeed;
             float translation = Input.GetAxis("Horizontal") * aimSpeed;
-            float power = Input.GetAxis("Vertical") * 2f;
+            float power = Input.GetAxis("Vertical") * 5f;
 
             // Make it move 10 meters per second instead of 10 meters per frame...
             translation *= Time.deltaTime;
@@ -51,12 +56,13 @@ public class Rock : MonoBehaviour {
                 
             }
         }
-        else if (actualSpeed < 0.5)
+        else if (actualSpeed < 0.01 && !rockSpawned) // or falls off
         {
             //rb.velocity = new Vector3(0, 0, 0);
             //Or
             //rb.constraints = RigidbodyConstraints.FreezeAll;
             SpawnRock();
+            rockSpawned = true;
         }
 
         
@@ -66,6 +72,22 @@ public class Rock : MonoBehaviour {
     {
         Rigidbody rb = this.GetComponent<Rigidbody>();
         rb.AddForce(transform.up * throwForce, ForceMode.Impulse);
+        pointer.active = false;
     }
 
+    //Spawn rock to throw, alternating teams
+    public void SpawnRock()
+    {
+        if (Game.yPrev)
+        {
+            GameObject rockRed = Instantiate(rockRPrefab);
+            Game.yPrev = false;
+        }
+        else
+        {
+            GameObject rockYellow = Instantiate(rockYPrefab);
+            Game.yPrev = true;
+        }
+
+    }
 }
